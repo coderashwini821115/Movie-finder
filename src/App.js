@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import Header from './components/ui/header'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import './App.css';
+import { useState, useEffect } from 'react';
+import Popular from './components/ui/Popular';
+import Search from './components/ui/Search';
+import CharacterGrid from './components/characters/CharacterGrid';
 
-function App() {
+const App=() => {
+  const [items, setItems] = useState([]);
+  const [isLoading, setisLoading] = useState(true);
+  const [text, setText] = useState('')
+  const [query, setQuery] = useState('')
+  const set = (results) => {
+    setItems(results.data);
+      setisLoading(false)
+  }
+  const setQ = (q) => {
+    setText(q);
+    // if(q !== ''){
+    setQuery(q);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+    <div className='container'>
+      <Header />
+      <Search set = {set} setQ={setQ} text={text} query={query}/>
+      <Popular set={set} items={items} query={query}/>
+      <CharacterGrid isLoading= {isLoading} items = {items} />
     </div>
+    </Router>
   );
 }
 
