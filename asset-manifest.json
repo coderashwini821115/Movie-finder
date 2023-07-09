@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Movie-finder/static/css/main.156a781b.css",
+    "main.js": "/Movie-finder/static/js/main.d44d346f.js",
+    "static/media/movie.png": "/Movie-finder/static/media/movie.b871d2fa71a82a63cb49.png",
+    "static/media/spinner.gif": "/Movie-finder/static/media/spinner.11d9cde8ebaeadb07ba7.gif",
+    "static/media/bg.jpg": "/Movie-finder/static/media/bg.085908ea8f76e1ae1806.jpg",
+    "index.html": "/Movie-finder/index.html",
+    "main.156a781b.css.map": "/Movie-finder/static/css/main.156a781b.css.map",
+    "main.d44d346f.js.map": "/Movie-finder/static/js/main.d44d346f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.156a781b.css",
+    "static/js/main.d44d346f.js"
+  ]
+}
