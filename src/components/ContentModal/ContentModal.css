@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+.ContentModal__landscape {
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+/* .ContentModal__portrait {
+  display: none;
+  object-fit: contain;
+  border-radius: 10px;
+} */
+
+.tagline {
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+.ContentModal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  align-items: center;
+}
+
+.ContentModal::-webkit-scrollbar {
+  display: none;
+}
+
+.ContentModal__about {
+  padding: 10px;
+  width: 95%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-evenly;
+  font-weight: 300;
+}
+
+.ContentModal__title {
+  height: 12%;
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ContentModal__description {
+  display: flex;
+  height: 40%;
+  overflow-y: scroll;
+  padding: 15px;
+  border-radius: 20px;
+  scrollbar-width: thin; /* Firefox */
+  box-shadow: inset 0 0 5px #000000;
+  text-align: justify;
+}
+
+.ContentModal__description::-webkit-scrollbar {
+  display: none;
+}
+.outer {
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 835px) {
+  .ContentModal__landscape {
+    display: none;
+  }
+  .ContentModal__portrait {
+    object-fit: contain;
+    overflow: hidden;
+  }
+  .outer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .ContentModal {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 0;
+    
+  }
+  .ContentModal__about {
+    
+    padding: 0;
+    height: 100%;
+    margin-left: 15px;
+    width: 50%;
+  }
+  .ContentModal__title {
+    font-size: 3.5vw;
+  }
+  .ContentModal__description {
+    font-size: 22px;
+  }
+  /* img{
+    max-width: ;
+  } */
+}
+@media (max-width: 834px) {
+    img{
+        /* max-width:450px;
+        max-height:450px; */
+        align-items: center;
+    }
+    .ContentModal__portrait {
+        display: none;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+      .ContentModal__landscape{
+        object-fit: contain;
+      }
+}

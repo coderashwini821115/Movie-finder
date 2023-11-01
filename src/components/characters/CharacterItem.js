@@ -1,10 +1,11 @@
 import React from 'react'
+import ContentModal from '../ContentModal/ContentModal'
 
 const CharacterItem = ({item}) => {
   // console.log(item);
   // console.log(item.img)
   return (
-    <div className='card'>
+    <ContentModal id = {item.id}>
     <div className='card-inner'>
       <div className='card-front'>
         <img src= {`https://image.tmdb.org/t/p/original/${item.poster_path}`} alt='No image available' />
@@ -27,7 +28,7 @@ const CharacterItem = ({item}) => {
         </ul>
       </div>
     </div>
-  </div>
+  </ContentModal>
 )
 }
 
